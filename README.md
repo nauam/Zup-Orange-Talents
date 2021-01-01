@@ -1,64 +1,81 @@
-# Zup-Orange-Talents
+# Desafio Orange Talents
 
-Contexto:
+<p align="center">
+  <img src="https://img.shields.io/static/v1?label=java&message=15&color=blue&style=for-the-badge&logo=java"/> <img src="https://img.shields.io/static/v1?label=maven&message=4.0.0&color=red&style=for-the-badge&logo=apache"/> <img src="http://img.shields.io/static/v1?label=spring-boot&message=2.4.1&color=red&style=for-the-badge&logo=spring"/>
 
+<img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=green&style=for-the-badge"/> <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
+</p>
 
-Você está fazendo uma API REST que precisa suportar o processo de abertura de nova conta no banco. O primeiro passo desse fluxo é cadastrar os dados pessoais de uma pessoa. Precisamos de apenas algumas informações obrigatórias:
+### Tópicos 
 
- 
+:fa-chevron-right: [Descrição do projeto](#descrição-do-projeto)
 
-Nome
+:fa-chevron-right: [Funcionalidades](#funcionalidades)
 
-E-mail
+:fa-chevron-right: [Pré-requisitos](#pré-requisitos)
 
-CPF
+:fa-chevron-right: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
 
-Data de nascimento
- 
+## Descrição do projeto 
 
-Caso os dados estejam corretos, é necessário gravar essas informações no banco de dados relacional e retornar o status adequado para a aplicação cliente, que pode ser uma página web ou um aplicativo mobile.
+<p align="justify">
+   API REST para um processo de abertura de nova conta no banco. As informações obrigatórias são: Nome, E-mail, CPF e Data de nascimento. A API devolve um resposta adequada para o caso de falha de validação e duplicação.
+</p>
 
- 
+## Funcionalidades
 
-Você deve fazer com que sua API devolva a resposta adequada para o caso de falha de validação. 
+:fa-check: Metodo POST: Envio dos parâmetros,
 
- 
+:fa-check: Validação: Todos os parâmetros estão preencidos,
 
-Seu desafio:
+:fa-check: Validação: Nome tem mais de 5 caracteres e menos que 120 caracteres,
 
+:fa-check: Validação e duplicação: E-mail e CPF.
 
-Dado que você fosse implementar esta etapa utilizando Java como linguagem e Spring + Hibernate como stacks de tecnologia fundamentais da aplicação, precisamos que você faça o seguinte:
+## Pré-requisitos
+:fa-arrow-down: [JDK 15](https://www.oracle.com/br/java/technologies/javase-downloads.html)
+:fa-arrow-down: [Apache Maven](https://maven.apache.org/download.cgi)
+:fa-arrow-down: [Spring Tool Suite 4](https://spring.io/tools)
+:fa-arrow-down: [Postman](https://www.postman.com/downloads/)
+:fa-arrow-down: [Xampp](https://www.apachefriends.org/pt_br/index.html)
 
- 
+## Dependências
+:fa-wrench: H2 Database
+:fa-wrench: Spring Boot DevTools 
+:fa-wrench: Spring Data JPA
+:fa-wrench: Spring Web
+:fa-wrench: Validation
 
-Escreva um post de blog explicando de maneira detalhada tudo que você faria para implementar esse código.
+## Como rodar a aplicação :fa-cogs:
 
-No texto, queremos que você aborde os pontos:
+No terminal, clone o projeto:
+```
+git clone https://github.com/nauam/Zup-Orange-Talents.git
+```
+Abra o **Spring Tool Suite 4**, para importar o projeto, faça: *File>Import...>Existing Maven Projects>Next>Browse *(Selecione o camino do projeto)*>Finish*, a partir disso, irá carregar todas as dependencias.
 
-Quais tecnologias do mundo Spring você usaria?
+No arquivo **ContaApplication.java**, clique com o *botão direto do mouse>Run As>Spring Boot App*, isso rodará o projeto.
 
-Quais classes seriam criadas nesse processo?
+Abra o **Postman**, selecione *POST* em 
 
-Qual foi o seu processo de decisão para realizar a implementação?
+	localhost:8080/contas
 
-Qual o papel de cada tecnologia envolvida no projeto?
+No **Body**, selecione *JSON (application/json)* , escreva os dados a serem castrados na abertura da nova conta no banco,
 
-Os itens acima são obrigatórios, mas não se limite. Se quiser escrever mais, fique à vontade (Não existe quantidade máxima de páginas ou caracteres).
+####Json
 
- 
+```json
+{
+	"nome" : "Maria de Nazaré Esteves Tedesco",
+	"email" : "nazare.tedesco@outlook.com",
+	"cpf": "10131949004",
+	"dataNascimento": "24/08/1968"
+}
+```
+ e envie (**Send**).
 
-Item bônus: Se ficou fácil, considere que você também precisa explicar como faria para proteger a aplicação de e-mail e CPF duplicados.
+## Licença 
 
-Mais do que respostas certas, queremos ver o quão nerd você consegue ser e o que considera relevante. O importante é mostrar que consegue aprender, se fazer entender e ainda transmitir conhecimento.
+The [MIT License]() (MIT)
 
- 
-
-Seu texto poderá conter trechos de códigos ou imagens e deverá enviá-lo em formato PDF, no link abaixo:
-
- 
-
-https://app3.greenhouse.io/application_form/58700be3f3b90197ccb12d730acdb9cc?utm_medium=email&utm_source=FormMailer%23form_email" target="_blank" rel="noopener">Link para Enviar seu Blog Post
-
- 
-
-O prazo para envio é de uma semana, mas devido ao período de festas, estendemos até o dia 03 de Janeiro.
+Copyright &copy;  2021 - Desafio Orange Talents (Nauam)

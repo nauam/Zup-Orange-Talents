@@ -9,10 +9,15 @@
 </p>
 
 ### Tópicos 
+
 :small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
+
 :small_blue_diamond: [Funcionalidades](#funcionalidades)
+
 :small_blue_diamond: [Pré-requisitos](#pré-requisitos)
+
 :small_blue_diamond: [Dependências](#dependências)
+
 :small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
 
 ## Descrição do projeto 
@@ -24,22 +29,34 @@
 ## Funcionalidades
 
 :heavy_check_mark: Metodo POST: Envio dos parâmetros,
+
 :heavy_check_mark: Validação: Todos os parâmetros estão preencidos,
+
 :heavy_check_mark: Validação: Nome tem mais de 5 caracteres e menos que 120 caracteres,
+
 :heavy_check_mark: Validação e duplicação: E-mail e CPF.
 
 ## Pré-requisitos
+
 :warning: [JDK 15](https://www.oracle.com/br/java/technologies/javase-downloads.html)
+
 :warning: [Apache Maven](https://maven.apache.org/download.cgi)
+
 :warning: [Spring Tool Suite 4](https://spring.io/tools)
+
 :warning: [Postman](https://www.postman.com/downloads/)
+
 :warning: [Xampp](https://www.apachefriends.org/pt_br/index.html)
 
 ## Dependências
 :wrench: H2 Database
+
 :wrench: Spring Boot DevTools 
+
 :wrench: Spring Data JPA
+
 :wrench: Spring Web
+
 :wrench: Validation
 
 ## Como rodar a aplicação :arrow_forward:

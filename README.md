@@ -1,52 +1,48 @@
+
 # Desafio Orange Talents
 
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=java&message=15&color=blue&style=for-the-badge&logo=java"/> <img src="https://img.shields.io/static/v1?label=maven&message=4.0.0&color=red&style=for-the-badge&logo=apache"/> <img src="http://img.shields.io/static/v1?label=spring-boot&message=2.4.1&color=red&style=for-the-badge&logo=spring"/>
-
+</p>
+<p align="center">
 <img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=green&style=for-the-badge"/> <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
 </p>
 
 ### Tópicos 
-
-:fa-chevron-right: [Descrição do projeto](#descrição-do-projeto)
-
-:fa-chevron-right: [Funcionalidades](#funcionalidades)
-
-:fa-chevron-right: [Pré-requisitos](#pré-requisitos)
-
-:fa-chevron-right: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
+:small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
+:small_blue_diamond: [Funcionalidades](#funcionalidades)
+:small_blue_diamond: [Pré-requisitos](#pré-requisitos)
+:small_blue_diamond: [Dependências](#dependências)
+:small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
 
 ## Descrição do projeto 
 
 <p align="justify">
-   API REST para um processo de abertura de nova conta no banco. As informações obrigatórias são: Nome, E-mail, CPF e Data de nascimento. A API devolve um resposta adequada para o caso de falha de validação e duplicação.
+   API REST para um processo de abertura de nova conta no banco. As informações obrigatórias são: Nome, E-mail, CPF e Data de nascimento. 
 </p>
 
 ## Funcionalidades
 
-:fa-check: Metodo POST: Envio dos parâmetros,
-
-:fa-check: Validação: Todos os parâmetros estão preencidos,
-
-:fa-check: Validação: Nome tem mais de 5 caracteres e menos que 120 caracteres,
-
-:fa-check: Validação e duplicação: E-mail e CPF.
+:heavy_check_mark: Metodo POST: Envio dos parâmetros,
+:heavy_check_mark: Validação: Todos os parâmetros estão preencidos,
+:heavy_check_mark: Validação: Nome tem mais de 5 caracteres e menos que 120 caracteres,
+:heavy_check_mark: Validação e duplicação: E-mail e CPF.
 
 ## Pré-requisitos
-:fa-arrow-down: [JDK 15](https://www.oracle.com/br/java/technologies/javase-downloads.html)
-:fa-arrow-down: [Apache Maven](https://maven.apache.org/download.cgi)
-:fa-arrow-down: [Spring Tool Suite 4](https://spring.io/tools)
-:fa-arrow-down: [Postman](https://www.postman.com/downloads/)
-:fa-arrow-down: [Xampp](https://www.apachefriends.org/pt_br/index.html)
+:warning: [JDK 15](https://www.oracle.com/br/java/technologies/javase-downloads.html)
+:warning: [Apache Maven](https://maven.apache.org/download.cgi)
+:warning: [Spring Tool Suite 4](https://spring.io/tools)
+:warning: [Postman](https://www.postman.com/downloads/)
+:warning: [Xampp](https://www.apachefriends.org/pt_br/index.html)
 
 ## Dependências
-:fa-wrench: H2 Database
-:fa-wrench: Spring Boot DevTools 
-:fa-wrench: Spring Data JPA
-:fa-wrench: Spring Web
-:fa-wrench: Validation
+:wrench: H2 Database
+:wrench: Spring Boot DevTools 
+:wrench: Spring Data JPA
+:wrench: Spring Web
+:wrench: Validation
 
-## Como rodar a aplicação :fa-cogs:
+## Como rodar a aplicação :arrow_forward:
 
 No terminal, clone o projeto:
 ```
@@ -61,9 +57,6 @@ Abra o **Postman**, selecione *POST* em
 	localhost:8080/contas
 
 No **Body**, selecione *JSON (application/json)* , escreva os dados a serem castrados na abertura da nova conta no banco,
-
-####Json
-
 ```json
 {
 	"nome" : "Maria de Nazaré Esteves Tedesco",

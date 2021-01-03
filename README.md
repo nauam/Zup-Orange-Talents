@@ -32,7 +32,7 @@
 
 :heavy_check_mark: Validação: Todos os parâmetros estão preencidos,
 
-:heavy_check_mark: Validação: Nome tem mais de 5 caracteres e menos que 120 caracteres,
+:heavy_check_mark: Validação: Nome tem que conter mais de 5 caracteres,
 
 :heavy_check_mark: Validação e duplicação: E-mail e CPF.
 
@@ -42,16 +42,10 @@
 
 :warning: [Apache Maven](https://maven.apache.org/download.cgi)
 
-:warning: [Spring Tool Suite 4](https://spring.io/tools)
-
 :warning: [Postman](https://www.postman.com/downloads/)
-
-:warning: [Xampp](https://www.apachefriends.org/pt_br/index.html)
 
 ## Dependências
 :wrench: H2 Database
-
-:wrench: Spring Boot DevTools 
 
 :wrench: Spring Data JPA
 
@@ -61,19 +55,34 @@
 
 ## Como rodar a aplicação :arrow_forward:
 
-No terminal, clone o projeto:
+### clone o projeto:
+
 ```
 git clone https://github.com/nauam/Zup-Orange-Talents.git
+cd Zup-Orange-Talents
 ```
-Abra o **Spring Tool Suite 4**, para importar o projeto, faça: *File>Import...>Existing Maven Projects>Next>Browse *(Selecione o camino do projeto)*>Finish*, a partir disso, irá carregar todas as dependencias.
+### Construção
+Para construir o projeto com o Maven, executar os comando abaixo:
 
-No arquivo **ContaApplication.java**, clique com o *botão direto do mouse>Run As>Spring Boot App*, isso rodará o projeto.
+```
+mvn clean install
+```
 
-Abra o **Postman**, selecione *POST* em 
+O comando irá baixar todas as dependências do projeto e criar um diretório target com os artefatos construídos, que incluem o arquivo jar do projeto. Além disso, serão executados os testes unitários, e se algum falhar, o Maven exibirá essa informação no console.
 
-	localhost:8080/contas
+### Execução
+Para executar o projeto com o Maven Spring Boot Plugin, executar os comando abaixo:
 
-No **Body**, selecione *JSON (application/json)* , escreva os dados a serem castrados na abertura da nova conta no banco,
+```
+mvn spring-boot:run
+```
+O comando irá rodar o projeto e subir na porta 8080
+
+### Requisições
+
+<details><summary><b>Payload (Clique aqui)</b></summary>
+
+Cadastrar uma nova conta no banco: [**POST**]
 ```json
 {
 	"nome" : "Maria de Nazaré Esteves Tedesco",
@@ -82,7 +91,7 @@ No **Body**, selecione *JSON (application/json)* , escreva os dados a serem cast
 	"dataNascimento": "24/08/1968"
 }
 ```
- e envie (**Send**).
+</details>
 
 ## Licença 
 
